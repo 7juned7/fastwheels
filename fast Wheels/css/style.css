@@ -1,0 +1,171 @@
+*{
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    margin: 0;padding: 0;
+    list-style: none;
+}
+
+
+.header{
+    max-width: 100%;
+    position:sticky;
+    width: 100%;
+    top: 0;
+    
+    background: #FA9DAA;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 1rem 4rem;
+    justify-content: space-between;
+    box-shadow: 0 0 20px 1px #f56a7d;
+    z-index: 99999;
+    
+}
+.navigation{
+    min-width:max-content;
+   
+}
+.navigation ul{
+    display: flex;
+    gap: 2rem;
+ 
+align-items: center;    
+}
+.navigation li a{
+    color: #fff;
+    font-size: 1.2rem;
+}
+.install-btn{
+    color: #FA9DAA;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1rem 3rem;
+    margin: 1rem;
+}
+.header_grid{
+    background-color: #FA9DAA;
+    display: grid;
+    grid-template-columns: 1fr auto 2fr auto 0px;
+    grid-template-rows: .5fr 4fr .5fr;
+    
+
+}
+.info{
+    position: absolute;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-column-end:4 ;
+   margin: auto 0;
+   color: #ffffff;
+   z-index: 9999;
+   margin-left: 2rem;
+   top: 40vh;
+
+}
+.info h2{
+    margin: 1rem;
+    font-size: 3rem;
+}
+.info h3{
+    margin: 1rem;
+    
+}
+.info p{
+    margin: 1rem;
+    font-size: 1rem;
+
+}
+.header_img {
+grid-row-start:2 ;
+grid-column-start:4 ;
+border-radius: 5rem;
+overflow: hidden;
+box-shadow:  0px 0px 4rem 4rem #f5808f;
+}
+.burger{
+    display: none;
+
+}
+@media only screen and (max-width: 1000px)  {
+ .header{
+     padding: 0rem 1rem;
+     min-width: fit-content;
+     
+ }  
+
+ .logo{
+     width: 150px;
+ }
+   .navigation ul{
+      
+       white-space: nowrap;
+      
+   }
+   .navigation ul li a{
+     font-size: 1rem;
+   }
+   .navigation button{
+       font-size: .9rem;
+       padding: .5rem 1rem;
+   }
+}
+@media only screen and (max-width: 790px)
+{body{
+    overflow: hidden;
+}
+.header{
+    height: 10vh;
+}
+    .navigation{
+        width: 60%;
+    position: absolute;
+    
+    top: 10vh;
+    height: 90vh;
+    right: 0;
+    background-color: black;
+   
+     display: flex;
+    flex-direction: column;
+    transform: translate(100%);
+    transition: transform 0.5s ease-in;
+}
+.navigation ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    
+}
+
+.navigation ul li a{
+    font-size: 1.5rem;
+    
+    
+}
+.burger{display: block;
+    
+    height: 20px;
+    width: 20px;
+    align-self: center;
+    cursor: pointer;
+    
+   
+    
+
+}
+.line{
+    background-color: rgb(255, 255, 255);
+    height: 3px;
+    margin: 3px 0;
+    
+    
+
+}
+.navigation.active{
+transform: translateX(0%);
+}
+}
